@@ -1,0 +1,59 @@
+{
+  "name": "review-privacy-retention-exception-tracker",
+  "description": "Run Privacy Retention Exception Tracker",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "data_scope": {
+            "type": "array",
+            "description": "data scope"
+          },
+          "justification": {
+            "type": "string",
+            "description": "justification"
+          },
+          "exception_owner": {
+            "type": "string",
+            "description": "exception owner"
+          },
+          "expiry_date": {
+            "type": "string",
+            "description": "expiry date"
+          }
+        },
+        "required": [
+          "data_scope",
+          "justification",
+          "exception_owner",
+          "expiry_date"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-privacy-retention-exception-tracker.py",
+    "runtime": "python3"
+  }
+}

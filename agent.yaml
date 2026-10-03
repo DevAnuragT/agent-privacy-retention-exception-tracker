@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: privacy-retention-exception-tracker
+version: 0.1.0
+description: Check retention exceptions for scope, owner, justification, and expiry evidence.
+skills:
+  - privacy-retention-exception-tracker-skill
+tools:
+  - review-privacy-retention-exception-tracker
+tags:
+  - privacy
+  - evidence-driven

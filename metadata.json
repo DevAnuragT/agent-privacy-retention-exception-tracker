@@ -1,0 +1,29 @@
+{
+  "slug": "privacy-retention-exception-tracker",
+  "title": "Privacy Retention Exception Tracker",
+  "category": "privacy",
+  "description": "Check retention exceptions for scope, owner, justification, and expiry evidence.",
+  "fields": {
+    "data_scope": {
+      "label": "data scope",
+      "kind": "list",
+      "minimum": 1
+    },
+    "justification": {
+      "label": "justification",
+      "kind": "text",
+      "minimum": 30
+    },
+    "exception_owner": {
+      "label": "exception owner",
+      "kind": "required",
+      "minimum": 0
+    },
+    "expiry_date": {
+      "label": "expiry date",
+      "kind": "date",
+      "minimum": 0
+    }
+  },
+  "limitations": "Uses caller-provided evidence only; cannot confirm external facts. Human review remains required."
+}
